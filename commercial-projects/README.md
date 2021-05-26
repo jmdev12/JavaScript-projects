@@ -6,6 +6,7 @@ Links to my commercial projects:
 4) Simple webinar landing page - http://www.jacobcodes.me/projects/webinar-landing-page/
 5) Case study subpage for interactive agency - http://www.jacobcodes.me/projects/greek/
 6) Kaptius home page - http://www.jacobcodes.me/projects/kaptius/
-7) Staywhole website - http://jacobcodes.me/projects/staywhole/
-8) LDN website - http://www.jacobcodes.me/projects/ldn/
+7) Redemption Roasters (Homepage and wholesale subpages) - http://www.jacobcodes.me/projects/redemption-roasters/
+8) Staywhole website - http://jacobcodes.me/projects/staywhole/
+9) LDN website - http://www.jacobcodes.me/projects/ldn/
 
