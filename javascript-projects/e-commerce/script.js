@@ -51,14 +51,12 @@ const EventsModule = (() => {
 
 
 const CartModule = (() => {
-
     const cartItemTemplate = document.querySelector("#cart-item-template");
     const cartEmptyTemplate = document.querySelector("#cart-empty-template");
     const productTemplate = document.querySelector("#product-template");
     const cartArr = [];
 
     const cartLength = () => cart.length;
-
 
     const DOMElements = {
 
