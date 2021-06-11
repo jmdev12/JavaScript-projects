@@ -12,9 +12,10 @@ Advanced projects: working... ⛏️
 1) Form validation ✔️
 2) E-commerce ✔️
 3) Countdown ✔️
-4) Face Detection
+4) Face Detection ✔️
 5) OCR recognition 
-6) Simple crypto trading app ⛏️
+6) Currency converter ⛏️
+7) Simple crypto charting app ✔️
 
 ### Vue.js
 1) To do ✔️
