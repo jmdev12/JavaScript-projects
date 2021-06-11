@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-weight: bolder;
+    color: #fff;
+    overflow: hidden;
+    background: #e9e9e9;  
+    font-family: 'Poppins', sans-serif;  
+}
+
+h1 {
+    font-size: 3.6rem;
+    margin-bottom: 3.2rem;
+}
+
+.wrapper  {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.countdown-container {
+    position: relative;
+    min-width: 70%;
+    padding: 2rem;
+    background: inherit;
+    border-radius: 45px;
+    z-index: 1000;
+    background: rgb(0,164,255);
+    background: -moz-linear-gradient(122deg, rgba(0,164,255,1) 0%, rgba(222,31,255,1) 100%);
+    background: -webkit-linear-gradient(122deg, rgba(0,164,255,1) 0%, rgba(222,31,255,1) 100%);
+    background: linear-gradient(122deg, rgba(0,164,255,1) 0%, rgba(222,31,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a4ff",endColorstr="#de1fff",GradientType=1);     box-shadow: 0 20px 2rem rgba(0, 0, 0, .25);
+}
+
+span::after {
+    position: absolute;
+    display: inline-block; 
+    width: 100%;  
+    bottom: -32px;
+    left: 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: -2rem;
+    color: #fff;
+}
+
+.days::after {
+    content: 'Days';
+}
+
+.hours::after {
+    content: 'Hours';
+}
+
+.minutes::after {
+    content: 'Minutes';
+}
+
+.seconds::after {
+    content: 'Seconds';
+}
+
+.clock-container {
+    background-attachment: #004fff;
+}
+
+span {
+    position: relative;
+    font-size: 7.2rem;
+}
+
+span:last-child {
+    margin-right: 0;
+}
+
+span:last-child::after {
+    margin-left: 0;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotateX(180deg) translate3d(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    html {
+        font-size: 19px;
+    }
+    .countdown-container {
+        min-width: 85%;
+    }
+   span {
+       margin-right: 1.5rem;
+   }  
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+    span {
+        font-size: 6rem;
+        margin-right: 1rem;
+    } 
+    .countdown-container {
+        min-width: 95%;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    html {
+        font-size: 16px;
+    }
+    .countdown-container {
+        min-width: 100%;
+        width: 100%;
+        border-radius: 0;
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    span {
+        font-size: 10vw;
+    } 
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    .clock-container {
+        padding: 1rem;
+    }
+    span {
+        margin-right: 0;
+    } 
+    span::after {
+        margin-left: -1rem;
+        font-size: .8rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+

@@ -1,0 +1,326 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background: #2A3139;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    -webkit-user-drag: auto;
+}
+
+main {
+    padding-bottom: 100px;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background: #1E252B;
+    width: 50%;
+    padding: 1.5rem;
+}
+
+.top-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.top-search input {
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    padding: .75rem;
+    border: 1px solid #fff;
+    width: 50%;
+}
+
+.top-search button {
+    height: 100%;
+    padding: 1rem;
+}
+
+.coins-list {
+    list-style-type: none;
+}
+
+.single-coin {
+    border: 1px solid #fff;
+    border-bottom-color: transparent;
+    font-size: 1.3rem;
+}
+
+
+.single-coin:last-child {
+    border-bottom-color: #fff;
+}
+
+.single-coin .thumbnail {
+    height: 52px;
+}
+
+.list-element {
+    display: grid;
+    grid-template-columns: 1fr 8rem 1fr;
+    padding: 1rem 8rem;
+}
+
+.list-element .thumbnail {
+    grid-column: 1;
+}
+
+.list-element .name {
+    text-align: center;
+    grid-column: 2;
+}
+
+.list-element .price {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column: 3;
+}
+
+.single-coin .list-element:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, .05);
+}
+
+.single-coin .details {
+    text-align: center;
+}
+
+.single-coin .details .name {
+    margin: 1.5rem 0;
+}
+
+.single-coin .percentage {
+    color: #54BA4A;
+}
+
+.single-coin .thumbnail:hover {
+    cursor: pointer;
+}
+.single-coin .details .price-details span {
+    margin: 0 1rem;
+}
+
+.chart {
+    margin-top: 2rem;
+}
+
+.details {
+    transition: all .5s ease-in-out;
+    display: none;
+    height: 0;
+}
+
+.single-coin.active .details {
+    display: block;
+    height: auto;
+}
+
+.single-coin.active:hover {
+    cursor: initial;
+    background: transparent;
+    pointer-events: none;
+}
+
+.negative {
+    color: #D34F4D !important;
+}
+
+.ticker {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 3rem;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.75rem;
+    padding: 0 2rem;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.focus circle {
+    fill: #fff;
+}
+
+.focus text {
+    font-size: .9rem;
+}
+
+.tooltip-date, .tooltip-price {
+    font-weight: bold;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+}
+
+.loader span {
+    width: 64px;
+    height: 64px;
+    border-right: 3px solid #fff;
+    border-radius: 50%;
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+   
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader.active {
+    display: flex;
+}
+
+.clear {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear:hover {
+    cursor: pointer;
+}
+
+.clear span {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d32525;
+}
+
+.clear svg {
+    width: 24px;
+}
+
+.alert {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    background: rgba(211, 37, 37, .5);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    transition: all .4s ease-in-out;
+    opacity: 0;
+}
+
+.alert.active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1550px) {
+    html {
+        font-size: 19px;
+    }
+    .content {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+    .content {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 996px) {
+    html {
+        font-size: 17px;
+    }
+    .content {
+        width: 100%;
+    }
+    .list-element {
+        padding: 1rem 5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    .content {
+        width: 100%;
+    }
+    .single-coin .thumbnail {
+        height: 36px;
+    }
+    .list-element {
+        padding: 1rem 3rem;
+    }
+    .chart {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 2rem;
+        -webkit-overflow-scrolling: touch;
+        overflow: scroll;
+    }
+    .chart-container {
+        overflow: hidden;
+    }
+    .chart svg {
+        padding-right: 3rem;
+        overflow: visible;
+    }
+}
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    .content {
+        width: 100%;
+    }
+    .list-element {
+        padding: 1rem 2rem;
+    }
+}
+

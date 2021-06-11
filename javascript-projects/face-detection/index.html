@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="alert">Unable to access webcam</div>
+    <div class="loader">
+        <div class="spinner"></div>
+        <div class="message"></div>
+    </div>
+    <div class="wrapper">
+        <div>
+            <div class="container">
+                <video class="source" autoplay id="video"></video>
+                <img class="source" id="sourceImg" src="" alt="">
+                <div class="source selected"></div>
+                <canvas></canvas>
+            </div>
+            <div class="detector-message"></div>
+        </div>
+        <div class="upload-image">
+            <label for="img">Upload your photo: </label>
+            <input type="file" name="img" id="img">
+        </div>
+        <div class="buttons">
+            <button data-value="cam" class="enable-webcam">Webcam</button>
+            <button data-value="img">Image</button>
+        </div>
+    </div>
+
+
+    <script src="face-api.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
