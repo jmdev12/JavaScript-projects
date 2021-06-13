@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency converter</title>
+</head>
+
+<body>
+
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-12 col-lg-10 col-xl-6 d-flex flex-column justify-content-center">
+                <div class="wrapper">
+                    <div class="results">
+                        <span class="rate">Exchange rate:</span>
+                        <span class="display-results"></span>
+                    </div>
+                    <div class="convert-input">
+                        <input type="number">
+                    </div>
+                    <div class="dropdowns">
+                        <div class="d-flex flex-column">
+                            <label for="starting-currency">From</label>
+                            <select name="starting-currency" class="starting-currency" id="currency"></select>
+                        </div>
+                        <svg class="arrows" width="116" height="79" viewBox="0 0 116 79" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M114.768 20.7678C115.744 19.7915 115.744 18.2085 114.768 17.2322L98.8579 1.32233C97.8816 0.34602 96.2986 0.34602 95.3223 1.32233C94.346 2.29864 94.346 3.88155 95.3223 4.85786L109.464 19L95.3223 33.1421C94.346 34.1184 94.346 35.7014 95.3223 36.6777C96.2986 37.654 97.8816 37.654 98.8579 36.6777L114.768 20.7678ZM3 21.5H113V16.5H3V21.5Z"
+                                fill="black" />
+                            <path
+                                d="M1.23223 61.7678C0.255922 60.7915 0.255922 59.2085 1.23223 58.2322L17.1421 42.3223C18.1184 41.346 19.7014 41.346 20.6777 42.3223C21.654 43.2986 21.654 44.8816 20.6777 45.8579L6.53553 60L20.6777 74.1421C21.654 75.1184 21.654 76.7014 20.6777 77.6777C19.7014 78.654 18.1184 78.654 17.1421 77.6777L1.23223 61.7678ZM113 62.5H3V57.5H113V62.5Z"
+                                fill="black" />
+                        </svg>
+                        <div class="d-flex flex-column">
+                            <label for="target-currency">To</label>
+                            <select name="target-currency" class="target-currency" id="currency"></select>
+                        </div>
+                    </div>
+                    <button class="submit-convert">Convert!</button>
+                </div>
+            </div>
+        </div>
+        <template id="currency-template">
+            <option id=""></option>
+        </template>
+    </div>
+    <div class="results">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
